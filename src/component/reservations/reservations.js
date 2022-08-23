@@ -1,7 +1,7 @@
 import React from "react";
 
 const Reservations = () => {
-    return(
+    return (
         <>
             <h1>Reservations</h1>
         </>

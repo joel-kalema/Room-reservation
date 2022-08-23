@@ -1,7 +1,7 @@
 import React from "react";
 
 const Sessions = () => {
-    return(
+    return (
         <>
             <h1>Sessions</h1>
         </>
