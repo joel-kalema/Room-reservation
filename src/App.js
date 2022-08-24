@@ -4,7 +4,7 @@ import Reservations from './component/reservations/reservations';
 import Sessions from './component/sessions/sessions';
 import Rooms from './component/rooms/rooms';
 import Header from './component/header/header';
-import Login from './component/auth/login';
+import Login from './component/auth/login/login';
 
 
 function App() {
