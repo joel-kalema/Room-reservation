@@ -116,7 +116,7 @@ const Login = () => {
                                 </button>
 
                                 <div className="text-sm">
-                                    <Link className="" to="/signup">
+                                    <Link className="" to="/register">
                                         <p
                                             href="#"
                                             className="font-medium text-blue-700 hover:text-blue-500 link-to-signup"
