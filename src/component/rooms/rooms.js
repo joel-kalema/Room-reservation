@@ -1,10 +1,15 @@
 import React from "react";
+import Header from "../header/header";
 
 const Rooms = () => {
     return (
-        <div className="rooms">
-            <h1>Rooms</h1>
-        </div>
+        <>
+            <Header />
+            <div className="rooms">
+                <h1>Rooms</h1>
+            </div>
+        </>
+
     )
 }
 

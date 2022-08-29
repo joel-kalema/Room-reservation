@@ -5,15 +5,17 @@ import Sessions from './component/sessions/sessions';
 import Rooms from './component/rooms/rooms';
 import Header from './component/header/header';
 import Login from './component/auth/login/login';
+import Signup from './component/auth/sign up/signup';
 
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        {/* <Header /> */}
         <Routes>
-          <Route path='/' element={<Login />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Signup />} />
           <Route path='/rooms' element={<Rooms />} />
           <Route path='/sessions' element={<Sessions />} />
           <Route path='/reservations' element={<Reservations />} />
