@@ -18,7 +18,7 @@
   -moz-box-shadow: 10px 10px 5px 129px rgba(0, 0, 0, 0.1) inset;
 }
 
-.loading-spinner-button>img {
+.loading-spinner-button > img {
   max-width: 25px;
   margin: 0.5rem;
 }
