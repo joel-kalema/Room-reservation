@@ -1,0 +1,66 @@
+body {
+  /* background-color: #9fbd3b; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.min-h-full {
+  background-image:
+    linear-gradient(to bottom, rgba(255, 230, 249, 0.188), rgba(153, 180, 63, 0.551)),
+    url('/src/assets/bed.jpg');
+  background-size: cover;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.appearance-none {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.link-to-signup {
+  margin-top: 1rem;
+  color: #1d4ed8;
+}
+
+.max-w-md {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 999;
+}
+
+.vehicle-image {
+  max-width: 100vw;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.girl-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1;
+  position: relative;
+}
+
+.girl-image img {
+  object-fit: cover;
+  height: 80%;
+  margin-left: -15rem;
+}
+
+.elements {
+  background-color: #f2f2f2 !important;
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
+}

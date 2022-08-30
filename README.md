@@ -2,7 +2,8 @@
 
 # Room reservation
 
-> Description the project.
+> The project you are going to build for the Final Capstone Project is based on an app to book a room. You should follow the given design of the website, but you must personalize the content.
+
 
 
 ## Built With
@@ -40,17 +41,30 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **joel kalema**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@joel-kalema](https://github.com/joel-kalema)
+- Twitter: [@JoelJklm](https://www.linkedin.com/in/joel-kalema)
+- LinkedIn: [joel kalema](https://twitter.com/JoelJklm)
 
-👤 **Author2**
+👤 **Furkan Salim Hıdır**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Fsher07](https://github.com/Fsher07)
+- Twitter: [@furkansalimhdr1](https://twitter.com/furkansalimhdr1)
+- LinkedIn: [Furkan Salim Hıdır](https://www.linkedin.com/in/fsalimhidir/)
+
+
+👤 **Linda Keza**
+
+
+- GitHub: [Visit my github](https://github.com/keza681)
+- LinkedIn: [Linkedin Profile](https://www.linkedin.com/in/linda-keza)
+
+👤 **Misheck Livingi**
+
+- GitHub: [@githubhandle](https://github.com/misheck12)
+- Twitter: [@twitterhandle](https://twitter.com/mishecklivingi2)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/misheck-livingi-a0b536142/)
 
 ## 🤝 Contributing
 

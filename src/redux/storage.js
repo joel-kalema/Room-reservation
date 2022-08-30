@@ -1,17 +1,9 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import { composeWithDevTools } from 'redux-devtools-extension';
-import logger from "redux-logger";
-import thunk from "redux-thunk";
+import { configureStore } from '@reduxjs/toolkit';
+import userReducer from './reducers/users/userSlice';
 
-const reducer = combineReducers({
 
-})
-
-const store = createStore(
-    reducer,
-    composeWithDevTools(
-        applyMiddleware(logger, thunk),
-    )
-)
-
-export default store
+export const store = configureStore({
+  reducer: {
+    user: userReducer,
+  },  
+});
