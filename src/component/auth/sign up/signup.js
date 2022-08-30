@@ -33,6 +33,7 @@ const Signup = () => {
             return;
         }
         const user = await requestRegisterUser(body);
+        console.log('HERE IS MY DATA', user);
         if (!user) {
             setOnFormSubmitMessage('User already registered!');
         } else {
@@ -131,7 +132,7 @@ const Signup = () => {
                                         className="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-green-500 focus:border-gray-500 focus:z-10 sm:text-sm"
                                         placeholder="Input name"
                                     />
-                                    {errors.email?.type === 'required' && (
+                                    {errors.name?.type === 'required' && (
                                         <FormError>Please input a valid name</FormError>
                                     )}
                                 </div>

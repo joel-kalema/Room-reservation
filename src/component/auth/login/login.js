@@ -30,15 +30,16 @@ const Login = () => {
         }, '4000')
 
         const body = JSON.stringify(data);
-        const { user, token } = await requestLogin(body);
-        if (!(user && token)) {
+        const { user, jwt } = await requestLogin(body);
+        console.log('OBJECT USER AND JWT TOKEN', { user, jwt });
+        if (!(user && jwt)) {
             toast.error('This user does not exist in our memory', {
                 position: 'top-right',
                 autoClose: '2000',
             });
             return;
         }
-        localStorage.setItem('token', token)
+        localStorage.setItem('jwt', jwt)
         dispatch(logUserIn(user));
         navigate(state?.path || '/')
 

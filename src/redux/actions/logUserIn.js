@@ -12,8 +12,10 @@ const requestLogin = async (body) => {
 
     const data = await res.json();
 
+    console.log('login request login action', data);
+
     if (data.error) {
-        return { user: undefined, token: undefined };
+        return { user: undefined, jwt: undefined };
     }
 
     return data;

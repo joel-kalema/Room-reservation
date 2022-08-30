@@ -8,7 +8,7 @@ const requestRegisterUser = async (body) => {
         },
     };
     const res = await fetch(
-        'http://127.0.0.1:3000/signup',
+        'http://127.0.0.1:3000/signup/',
         {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -17,9 +17,12 @@ const requestRegisterUser = async (body) => {
     );
 
     const data = await res.json();
-    console.log('HERE IS MY DATA', data);
     if (!data.id) {
-        return undefined;
+        return (
+            <>
+                <p>Hello, no user found</p>
+            </>
+        );
     }
 
     return data;
