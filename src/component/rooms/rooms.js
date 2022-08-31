@@ -4,6 +4,7 @@ import Header from "../header/header";
 import { fetchRooms } from "../../redux/reducers/rooms/roomSlice";
 import './room.css';
 
+
 const Rooms = () => {
     const dispatch = useDispatch();
     const rooms = useSelector(state => state.rooms.rooms);
