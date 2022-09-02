@@ -1,6 +1,5 @@
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
-toast.configure()
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Reservations from './component/reservations/reservations';
 import Sessions from './component/sessions/sessions';
