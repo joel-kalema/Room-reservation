@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.rooms {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 15%;
+    padding: 0 4rem;
+    margin-top: -3rem;
+    z-index: 300;
+}
+
+.home_image {
+    z-index: 3;
+    position: relative;
+    margin-left: 15%;
+    width: 85%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.home_image img {
+    width: 100%;
+}
+
+.home_image span {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+.home-title {
+    position: absolute;
+    color: #fff;
+    z-index: 4;
+    width: 50%;
+    margin: 3rem;
+}
+
+.home-title h1 {
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+.room_data a {
+    text-decoration: none;
+    color: rgb(27, 27, 27)
+}
+
+.home-title p {
+    font-size: 14px;
+}
+
+.room {
+    z-index: 300;
+    width: 30%;
+    background-color: #fff;
+    padding: 1rem .5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.329);
+}
+
+.room_data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.room_data img {
+    margin-bottom: 30px;
+}
+
+.rooms_detail {
+    padding: 0 5rem;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    width: 100%;
+    z-index: 4000;
+}
+
+.room_detail {
+    width: 90%;
+    margin: 2rem auto;
+    z-index: 4000;
+}
+
+.room_detail a {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: darkgreen;
+    z-index: 400;
+    padding: 3px 15px;
+    border-radius: 15px;
+}
+
+.room_detail img {
+    width: 70%;
+}
+
+.room_detail h1 {
+    margin-top: 2rem;
+    font-size: 40px;
+}
+
+.room_detail p {
+    margin-top: 2rem;
+    width: 70%;
+}
+
+.room_detail h4 {
+    margin-top: 20px;
+    font-size: 30px;
+    padding: 20px;
+    width: 10%;
+    background-color: darkgreen;
+    color: #fff;
+}
+
+@media only screen and (max-width: 820px) {
+    .rooms {
+        font-family: 'Roboto', sans-serif;
+        margin-left: 0;
+        padding: 0 1rem;
+        margin-top: -3rem;
+        z-index: 300;
+    }
+
+    .home_image img {
+        height: 100%;
+    }
+
+    .home_image span {
+        background-color: rgba(0, 0, 0, 0.486);
+    }
+    
+    .home_image {
+        z-index: 3;
+        position: relative;
+        margin-left: 0;
+        width: 100%;
+        height: 50vh;
+    }
+
+    .home-title {
+        position: absolute;
+        z-index: 4;
+        width: 90%;
+        margin: 2rem;
+    }
+    
+    .home-title h1 {
+        font-size: 40px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .home-title p {
+        font-size: 14px;
+        width: 70%;
+    }
+
+    .room_data {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .room {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .room_data h1 {
+        font-size: 12px;
+    }
+
+    .rooms_detail {
+        height: 100vh;
+        padding: 3rem 1rem;
+    }
+    
+    .room_detail {
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    .room_detail a {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .room_detail img {
+        width: 90%;
+    }
+    
+    .room_detail h1 {
+        margin-top: 1rem;
+        font-size: 30px;
+    }
+    
+    .room_detail p {
+        margin-top: 1rem;
+        width: 90%;
+    }
+    
+    .room_detail h4 {
+        margin-top: 20px;
+        font-size: 20px;
+        padding: 20px;
+        width: 30%;
+    }
+  }
