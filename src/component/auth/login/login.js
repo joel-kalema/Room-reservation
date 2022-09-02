@@ -30,16 +30,20 @@ const Login = () => {
         }, '4000')
 
         const body = JSON.stringify(data);
-        const { user, jwt } = await requestLogin(body);
-        console.log('OBJECT USER AND JWT TOKEN', { user, jwt });
-        if (!(user && jwt)) {
+        const { user, jti } = await requestLogin(body);
+        if (body) {
+            localStorage.setItem('jti', jti)
+            dispatch(logUserIn(user));
+            navigate(state?.path || '/')
+        }
+        if (!(user && jti)) {
             toast.error('This user does not exist in our memory', {
                 position: 'top-right',
                 autoClose: '2000',
             });
             return;
         }
-        localStorage.setItem('jwt', jwt)
+        localStorage.setItem('jti', jti)
         dispatch(logUserIn(user));
         navigate(state?.path || '/')
 
@@ -186,7 +190,7 @@ const Login = () => {
 
                                 <div className="text-sm">
                                     <a
-                                        href="g.com"
+                                        href="/"
                                         className="font-medium text-blue-700 hover:text-gray-300"
                                     >
                                         Forgot your password?
