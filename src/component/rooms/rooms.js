@@ -7,7 +7,6 @@ import './rooms.css';
 const Rooms = () => {
     const dispatch = useDispatch();
     const rooms = useSelector(state => state.rooms.rooms);
-    console.log('asd:', rooms);
     useEffect(() => {
         dispatch(fetchRooms());
     } , [dispatch]);

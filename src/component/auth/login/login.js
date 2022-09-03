@@ -3,8 +3,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
-import requestLogin from '../../../redux/actions/logUserIn';
-import { logUserIn } from '../../../redux/reducers/users/userSlice';
+// import requestLogin from '../../../redux/reducers/users/userSlice';
+import { logUserIn, requestLogin } from '../../../redux/reducers/users/userSlice';
 import SnipperLoginBtn from '../../loaders/snipper';
 import FormError from '../formError';
 import './login.css'
@@ -28,12 +28,13 @@ const Login = () => {
         setTimeout(() => {
             setIsLoading(false);
         }, '4000')
-
-        const body = JSON.stringify(data);
-        const { user, jti } = await requestLogin(body);
-        if (body) {
+        console.log(data);
+        // const body = JSON.stringify(data);
+        const { user, jti } = await requestLogin(data);
+        if (data) {
             localStorage.setItem('jti', jti)
-            dispatch(logUserIn(user));
+            dispatch(requestLogin(data));
+            
             navigate(state?.path || '/')
         }
         if (!(user && jti)) {
@@ -44,7 +45,8 @@ const Login = () => {
             return;
         }
         localStorage.setItem('jti', jti)
-        dispatch(logUserIn(user));
+        dispatch(requestLogin(data));
+       
         navigate(state?.path || '/')
 
         toast.success('User logged in succefully', {
