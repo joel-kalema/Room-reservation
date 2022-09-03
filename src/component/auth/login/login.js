@@ -3,8 +3,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
-import requestLogin from '../../../redux/actions/logUserIn';
-import { logUserIn } from '../../../redux/reducers/users/userSlice';
+// import requestLogin from '../../../redux/reducers/users/userSlice';
+import { logUserIn, requestLogin } from '../../../redux/reducers/users/userSlice';
 import SnipperLoginBtn from '../../loaders/snipper';
 import FormError from '../formError';
 import './login.css'
@@ -28,19 +28,25 @@ const Login = () => {
         setTimeout(() => {
             setIsLoading(false);
         }, '4000')
-
-        const body = JSON.stringify(data);
-        const { user, jwt } = await requestLogin(body);
-        console.log('OBJECT USER AND JWT TOKEN', { user, jwt });
-        if (!(user && jwt)) {
+        console.log(data);
+        // const body = JSON.stringify(data);
+        const { user, jti } = await requestLogin(data);
+        if (data) {
+            localStorage.setItem('jti', jti)
+            dispatch(requestLogin(data));
+            
+            navigate(state?.path || '/')
+        }
+        if (!(user && jti)) {
             toast.error('This user does not exist in our memory', {
                 position: 'top-right',
                 autoClose: '2000',
             });
             return;
         }
-        localStorage.setItem('jwt', jwt)
-        dispatch(logUserIn(user));
+        localStorage.setItem('jti', jti)
+        dispatch(requestLogin(data));
+       
         navigate(state?.path || '/')
 
         toast.success('User logged in succefully', {
@@ -186,7 +192,7 @@ const Login = () => {
 
                                 <div className="text-sm">
                                     <a
-                                        href="g.com"
+                                        href="/"
                                         className="font-medium text-blue-700 hover:text-gray-300"
                                     >
                                         Forgot your password?
