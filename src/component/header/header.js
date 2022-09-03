@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 
+
 const Header = () => {
     return (
         <>
@@ -8,6 +9,7 @@ const Header = () => {
                 <img src="logo.jpg" alt=""/>
                 <NavLink to="/">Rooms</NavLink>
                 <NavLink to="/sessions">Sessions</NavLink>
+                <NavLink to="/list_reservations">Reservations</NavLink>
                 <Link to="/login" className="login">Login</Link>
             </div>
         </>
