@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vh;
+}
+
+.nav a {
+  text-decoration: none;
+  padding: 1rem 3rem;
+}
+
+.active {
+  background-color: darkgreen;
+  color: #fff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
