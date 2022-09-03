@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# room reservation BACKEND
+# Room_Reservation
 
 > This project is about creating API end point using Ruby on Rails and deploying the API on heroku. The API has rooms and reservations endpoints. The API also has authentication and authorization for the user. The API is used in our front end React project which is based on an app to book a room.
 
