@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+
 
 const initialState = {
   reservations: [],
@@ -8,17 +8,16 @@ const initialState = {
 
 export const postReservations = createAsyncThunk(
   'reservations/postReservations',
-  async (reserve) => {
-    const response = await axios.post('http://[::1]:3000/api/v1/reservations', {
+  async (reservation) => {
+    const response = await fetch('http://[::1]:3000/api/v1/reservations', {
+      method: 'POST',
       headers: {
-        Authorization: localStorage.getItem('token'),
         'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('token'),
       },
       body: JSON.stringify({
-        reservation: {
-          reserve
-        }
+        reservation: reservation,
       }),
     });
-    return response;
+    return response.json();
   });

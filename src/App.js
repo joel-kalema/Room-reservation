@@ -8,6 +8,7 @@ import Header from './component/header/header';
 import Login from './component/auth/login/login';
 import Signup from './component/auth/sign up/signup';
 import Details from './component/rooms/roomDetail';
+import ReservationsList from './component/reservations/ReservationsList';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
               <Route path='/register' element={<Signup />} />
               <Route path='/' element={<Rooms />} />
               <Route path='/sessions' element={<Sessions />} />
+              <Route path='/list_reservations' element={<ReservationsList />} />
               <Route path='/reservations' element={<Reservations />} />
               <Route path='/room/:id' element={<Details />} />
             </Routes>
