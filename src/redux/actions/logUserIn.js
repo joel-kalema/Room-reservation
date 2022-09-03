@@ -1,6 +1,6 @@
 const requestLogin = async (body) => {
     const res = await fetch(
-        'http://127.0.0.1:3000/login',
+        'http://localhost:3000/users/login',
         {
             method: 'POST',
             headers: {
