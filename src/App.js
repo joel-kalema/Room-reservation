@@ -1,4 +1,5 @@
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Reservations from './component/reservations/reservations';
 import Sessions from './component/sessions/sessions';
@@ -14,17 +15,17 @@ function App() {
     <div className="App">
       <Router>
         <div>
-        <Header />
-        <div className='app_container'>
-        <Routes>
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Signup />} />
-          <Route path='/' element={<Rooms />} />
-          <Route path='/sessions' element={<Sessions />} />
-          <Route path='/reservations' element={<Reservations />} />
-          <Route path='/room/:id' element={<Details />} />
-        </Routes>
-        </div>
+          <Header />
+          <div className='app_container'>
+            <Routes>
+              <Route path='/login' element={<Login />} />
+              <Route path='/register' element={<Signup />} />
+              <Route path='/' element={<Rooms />} />
+              <Route path='/sessions' element={<Sessions />} />
+              <Route path='/reservations' element={<Reservations />} />
+              <Route path='/room/:id' element={<Details />} />
+            </Routes>
+          </div>
         </div>
       </Router>
     </div>

@@ -1,24 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .rooms {
-  font-family: 'Roboto', sans-serif;
-  margin-left: 15%;
-  padding: 0 4rem;
-  margin-top: -3rem;
-  z-index: 300;
-}
-
-.home_image {
-  z-index: 3;
-  position: relative;
-  margin-left: 15%;
-  width: 85%;
-  height: 50vh;
-  overflow: hidden;
-}
-
-.home_image img {
-  width: 100%;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 15%;
+    padding: 0 4rem;
+    margin-top: -3rem;
+    z-index: 300;
 }
 
 .home_image span {

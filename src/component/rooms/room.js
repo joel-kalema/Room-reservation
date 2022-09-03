@@ -9,7 +9,7 @@ const Room = () => {
             <div className="room_data">
                 {rooms.map(room => (
                     <div className="room">
-                        <img src={room.image} alt="google advertising" />
+                        <img src={room.picture} alt="google advertising" />
                         <h1 className='font-bold'>{room.name}</h1>
                         <h4 className='font-bold'>{room.price}$</h4>
                         <Link to={`/room/${room.id}`}>details</Link>

@@ -8,7 +8,7 @@ const requestRegisterUser = async (body) => {
         },
     };
     const res = await fetch(
-        'http://localhost:3000/users/signup',
+        'http://127.0.0.1:3000/users/signup/',
         {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -17,6 +17,7 @@ const requestRegisterUser = async (body) => {
     );
 
     const data = await res.json();
+    console.log('-------------', data);
     if (!data.id) {
         return (
             <>
