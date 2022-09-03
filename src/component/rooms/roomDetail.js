@@ -13,21 +13,16 @@ const Details = () => {
                 <div className="room_detail">
                     {rooms.length > 0 ? rooms.filter(room => room.id === parseInt(id)).map(room => (
                         <div key={room.id} className="room">
-                            <img src={room.image} alt="google advertising" />
+                            <img src={room.picture} alt="google advertising" />
                             <div className="room-name">{room.name}</div>
                             <div className="room-description">{room.description}</div>
                             <div className="room-price">{room.price}</div>
+                            <Link to="/reservations" className="bg-amber-300">Reserve</Link>
                         </div>
                     )) : <div>Loading...</div>}
                     
-                    <Link to='/'>Back</Link>
-                   
-                    {/* <img src={room.image} alt="google advertising" />
-                    <h1 className='font-bold'>{room.name}</h1>
-                    <p>{room.description}</p>
-                    <h4 className='font-bold'>{room.price}$</h4> */}
+                    <Link to='/' className="back">Back</Link>
                 </div>
-                <Link to="/reservations" className="bg-amber-300">Reserve</Link>
             </div>
         </>
 

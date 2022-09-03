@@ -28,17 +28,17 @@ const Reservations = () => {
     }
 
     return (
-        <>
+        <div className="reservation">
             <h1>Reservations</h1>
             <form onSubmit={(e) => handleSubmit(e)}>
-                <label for="cars">check in:</label>
+                <label htmlFor="cars">check in:</label>
                 <input className="ml-64" type="date" id="start" name="trip-start"
                     min="2022-10-01" max="2023-12-31" />
-                <label for="cars">check out:</label>
+                <label htmlFor="cars">check out:</label>
                 <input className="ml-64" type="date" id="start" name="trip-start"
                     min="2022-10-01" max="2023-12-31" />
                 <input type="text" placeholder="City" />
-                <label for="cars">Choose a room:</label>
+                <label htmlFor="cars">Choose a room:</label>
                 <select className="ml-64" name="rooms">
                     {rooms.length > 0 ? rooms.map(room => (
                         <option key={room.id} value={room.id}>{room.name}</option>
@@ -46,7 +46,7 @@ const Reservations = () => {
                 </select>
                 <button type="submit">Submit</button>
             </form>
-        </>
+        </div>
     )
 }
 

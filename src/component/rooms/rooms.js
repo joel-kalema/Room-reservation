@@ -12,15 +12,15 @@ const Rooms = () => {
     } , [dispatch]);
     return (
         <div>
+            <h1>Rooms</h1>
             <div className="rooms">
                 {rooms.length > 0 ? rooms.map(room => (
-                    <Link to={`/room/${room.id}`} key={room.id} name={room.name} price={room.price} description={room.description} image={room.image} reserved={room.reserved} className="room">
-                        <img src={room.image} alt="google advertising" />
+                    <Link to={`/room/${room.id}`} key={room.id} name={room.name} price={room.price} description={room.description} picture={room.picture} reserved={room.reserved} className="room">
+                        <img src={room.picture} alt="google advertising" />
                         <div className="room-name">{room.name}</div>
-                        <div className="room-description">{room.description}</div>
+                        <div className="room-description">{room.price}</div>
                     </Link>
                 )) : <div>Loading...</div>}
-                <h1>Rooms</h1>
             </div>
         </div>
 
